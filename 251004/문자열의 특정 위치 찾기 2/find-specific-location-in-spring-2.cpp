@@ -9,8 +9,8 @@ int main() {
     string arr[5] = {"apple", "banana", "grape", "blueberry", "orange"};
     for(int i = 0; i < 5; i++){
         string word = arr[i];
-        if(word[3] == eng || word[4] == eng){
-            cout << word;
+        if(word[2] == eng || word[3] == eng){
+            cout << word << '\n';
             sum += 1;
         }
         continue;
