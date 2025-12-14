@@ -2,12 +2,12 @@
 using namespace std;
 
 void Check(int *a, int *b){
-    if(a > b){
-        *a *= 2;
-        *b += 10;
+    if(*a > *b){
+        a *= 2;
+        b += 10;
     } else {
-        *a += 10;
-        *b *= 2;
+        a += 10;
+        b *= 2;
     }
 }
 
