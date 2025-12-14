@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void Check(int *a, int *b){
-    if(*a > *b){
+void Check(int &a, int &b){
+    if(a > b){
         a *= 2;
         b += 10;
     } else {
@@ -15,7 +15,7 @@ int main() {
     int a, b;
     cin >> a >> b;
 
-    Check(&a, &b);
+    Check(a, b);
 
     cout << a << " " << b;
 
