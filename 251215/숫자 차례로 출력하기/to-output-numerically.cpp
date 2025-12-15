@@ -6,13 +6,8 @@ void PrintNum(int N){
         return;
     }
     PrintNum(N-1);
+    cout << N << " ";
 
-    for(int i = 1; i <= N; i++){
-        if(i == N){
-            cout << i << " ";
-            return;
-        }
-    }
 }
 
 void PrintNumBack(int N){
