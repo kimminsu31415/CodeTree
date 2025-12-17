@@ -26,21 +26,17 @@ int main() {
         forecast[i] = Forecast(date, day, weather);
     }
 
-    int rain_frist_idx = 0;
-    for(int i = 1; i < n; i++){
+    int rain_least_idx = -1;
+    for(int i = 0; i < n; i++){
         if(forecast[i].weather == "Rain"){
 
-            for(int j = i+1; j < n; j++){
-                if(forecast[j].weather == "Rain"){
-                    if(forecast[i].date < forecast[j].date){
-                        rain_frist_idx = i;
-                    }
-                }
+            if(rain_least_idx == -1 || forecast[i].date < forecast[rain_least_idx].date){
+                rain_least_idx = i;
             }
         }
     }
 
-    cout << forecast[rain_frist_idx].date << " " << forecast[rain_frist_idx].day << " " << forecast[rain_frist_idx].weather;
+    cout << forecast[rain_least_idx].date << " " << forecast[rain_least_idx].day << " " << forecast[rain_least_idx].weather;
 
     
 
