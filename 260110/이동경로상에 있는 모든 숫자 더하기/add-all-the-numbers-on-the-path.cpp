@@ -4,8 +4,8 @@ using namespace std;
 
 int n, t;
 string command;
-int dr[4] = {0, 1, 0, -1};
-int dc[4] = {1, 0, -1, 0};
+int dr[4] = {-1, 0, 1, 0};
+int dc[4] = {0, 1, 0, -1};
 int curr_dir = 0;
 
 int Rotate(char cmd, int dir){
