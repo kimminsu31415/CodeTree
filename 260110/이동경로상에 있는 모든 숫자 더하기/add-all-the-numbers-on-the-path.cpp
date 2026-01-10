@@ -10,7 +10,7 @@ int curr_dir = 0;
 
 int Rotate(char cmd, int dir){
     if(cmd == 'L') return (dir + 3) % 4;
-    if(cmd == 'R') return (dir + 1) % 1;
+    if(cmd == 'R') return (dir + 1) % 4;
     return dir;
 }
 
